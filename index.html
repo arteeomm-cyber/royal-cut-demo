@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROYAL CUT | Premium Barbershop</title>
+<style>
+:root {
+  --gold:#d8b46a;
+  --bg:#0c0c0c;
+  --panel:#191919;
+  --muted:#aaa;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--bg);
+  color:white;
+  font-family:Arial,sans-serif;
+}
+a {text-decoration:none;color:inherit}
+header {
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#101010f5;
+  border-bottom:1px solid #333;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 7%;
+  gap:20px;
+}
+.logo {
+  color:var(--gold);
+  font: bold 26px Georgia,serif;
+  letter-spacing:3px;
+}
+nav {display:flex;gap:25px}
+nav a:hover {color:var(--gold)}
+.btn {
+  display:inline-block;
+  border:1px solid var(--gold);
+  background:var(--gold);
+  color:#111;
+  padding:14px 26px;
+  border-radius:4px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.btn:hover {background:#f2cf88}
+.hero {
+  min-height:650px;
+  background:
+   linear-gradient(90deg,#000e,#0005),
+   url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600')
+   center/cover;
+  display:flex;
+  align-items:center;
+  padding:8%;
+}
+.hero-content {max-width:620px}
+.tag {
+  color:var(--gold);
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+h1 {
+  font: bold clamp(42px,6vw,76px) Georgia,serif;
+  margin:20px 0;
+}
+.hero p {
+  font-size:19px;
+  color:#ddd;
+  line-height:1.7;
+}
+section {padding:90px 7%}
+.section-title {
+  text-align:center;
+  margin-bottom:45px;
+}
+.section-title h2 {
+  font: bold 38px Georgia,serif;
+  color:var(--gold);
+}
+.section-title p {color:var(--muted)}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+.card {
+  background:var(--panel);
+  border:1px solid #333;
+  border-radius:10px;
+  overflow:hidden;
+  transition:.3s;
+}
+.card:hover {
+  transform:translateY(-7px);
+  border-color:var(--gold);
+}
+.card img {
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  display:block;
+}
+.card-body {padding:25px}
+.card h3 {color:var(--gold)}
+.price {
+  color:white;
+  font-size:23px;
+  font-weight:bold;
+}
+.about {
+  background:#171717;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:45px;
+}
+.about img {
+  width:100%;
+  border-radius:12px;
+}
+.about p {color:#ccc;line-height:1.9}
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.gallery img {
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:8px;
+}
+.review {
+  padding:30px;
+  background:var(--panel);
+  border:1px solid #333;
+  border-radius:10px;
+  line-height:1.8;
+}
+.stars {color:var(--gold)}
+.booking {
+  background:#171717;
+  text-align:center;
+}
+form {
+  max-width:470px;
+  margin:auto;
+  display:grid;
+  gap:15px;
+}
+input,select {
+  width:100%;
+  padding:16px;
+  border:1px solid #444;
+  border-radius:5px;
+  background:#252525;
+  color:white;
+  font-size:16px;
+}
+#message {color:var(--gold)}
+footer {
+  padding:35px;
+  background:#080808;
+  text-align:center;
+  color:#999;
+}
+@media(max-width:800px) {
+  header {flex-direction:column}
+  nav {flex-wrap:wrap;justify-content:center}
+  .hero {min-height:520px}
+  .grid,.gallery {grid-template-columns:1fr 1fr}
+  .about {grid-template-columns:1fr}
+}
+@media(max-width:520px) {
+  .grid,.gallery {grid-template-columns:1fr}
+  .hero {padding:30px}
+  section {padding:65px 5%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ROYAL CUT</div>
+  <nav>
+    <a href="#home">Գլխավոր</a>
+    <a href="#services">Ծառայություններ</a>
+    <a href="#about">Մեր մասին</a>
+    <a href="#gallery">Նկարներ</a>
+    <a href="#booking">Ամրագրում</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">Premium Barbershop</div>
+    <h1>STYLE IS EVERYTHING</h1>
+    <p>Պրոֆեսիոնալ սանրվածքներ, բարձրակարգ
+    սպասարկում և յուրահատուկ ոճ։</p>
+    <a href="#booking" class="btn">Ամրագրել այց</a>
+  </div>
+</div>
+
+<section id="services">
+  <div class="section-title">
+    <h2>Մեր ծառայությունները</h2>
+    <p>Ընտրիր քո ոճը</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700" alt="Սանրվածք">
+      <div class="card-body">
+        <h3>Տղամարդու սանրվածք</h3>
+        <p>Ժամանակակից և դասական ոճեր</p>
+        <div class="price">3,000 ֏</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=700" alt="Մորուք">
+      <div class="card-body">
+        <h3>Մորուքի հարդարում</h3>
+        <p>Ճշգրիտ ձևավորում</p>
+        <div class="price">2,000 ֏</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700" alt="Վարսավիրանոց">
+      <div class="card-body">
+        <h3>Ամբողջական սպասարկում</h3>
+        <p>Սանրվածք և մորուք</p>
+        <div class="price">4,500 ֏</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900" alt="Մեր սրահը">
+  <div>
+    <div class="tag">About Us</div>
+    <h2>ROYAL CUT BARBERSHOP</h2>
+    <p>Մենք ստեղծում ենք ոչ միայն սանրվածքներ,
+    այլև անհատական ոճ։ Մեր նպատակն է
+    յուրաքանչյուր հաճախորդին ապահովել
+    հարմարավետ և որակյալ սպասարկմամբ։</p>
+    <a href="#booking" class="btn">Այցելել մեզ</a>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="section-title">
+    <h2>Պատկերասրահ</h2>
+    <p>Մեր աշխատանքների օրինակները</p>
+  </div>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700" alt="Օրինակ 1">
+    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=700" alt="Օրինակ 2">
+    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700" alt="Օրինակ 3">
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Հաճախորդների կարծիքներ</h2>
+    <p>Ցուցադրական օրինակներ</p>
+  </div>
+  <div class="grid">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>«Գեղեցիկ սրահ և լավ սպասարկում»</p>
+      <b>Օրինակ 1</b>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>«Արդյունքը գերազանցեց սպասելիքներս»</p>
+      <b>Օրինակ 2</b>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>«Հաճելի միջավայր և լավ աշխատանք»</p>
+      <b>Օրինակ 3</b>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="section-title">
+    <h2>Ամրագրել այց</h2>
+    <p>Լրացրեք տվյալները</p>
+  </div>
+  <form id="bookingForm">
+    <input id="name" placeholder="Ձեր անունը" required>
+    <input id="phone" type="tel" placeholder="Հեռախոսահամար" required>
+    <select id="service" required>
+      <option value="">Ընտրեք ծառայությունը</option>
+      <option>Տղամարդու սանրվածք</option>
+      <option>Մորուքի հարդարում</option>
+      <option>Ամբողջական սպասարկում</option>
+    </select>
+    <input id="date" type="date" required>
+    <button class="btn" type="submit">Ուղարկել հայտը</button>
+  </form>
+  <p id="message" role="status"></p>
+</section>
+
+<footer>
+  © 2026 ROYAL CUT | Demo Website
+</footer>
+
+<script>
+const form = document.getElementById("bookingForm");
+const date = document.getElementById("date");
+
+function todayLocal() {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth()+1).padStart(2,"0");
+  const day = String(d.getDate()).padStart(2,"0");
+  return `${y}-${m}-${day}`;
+}
+
+date.min = todayLocal();
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const message = document.getElementById("message");
+  if (date.value < todayLocal()) {
+    message.textContent = "Ընտրեք ապագա կամ այսօրվա ամսաթիվ։";
+    return;
+  }
+
+  const name = document.getElementById("name").value.trim();
+  message.textContent = name +
+    ", ձեր հայտը լրացված է։ Սա ցուցադրական տարբերակ է։";
+  form.reset();
+});
+</script>
+</body>
+</html>
